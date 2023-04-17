@@ -1,12 +1,117 @@
-.navbar-lewagon {
+.navibar {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  background-color: black;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navibar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 2rem;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navibar .links {
+  display: inline-flex;
+  gap: 2rem;
+  margin-top: 1.3rem;
+  margin-right: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navibar .toggle_btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  margin-right: 2rem;
+}
+
+#action_btn {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#action_btn:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#action_btn:active {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+/* RESPONSIVE DESIGN */
+
+.dropdown_menu {
+  display: none;
+  color: white;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 155px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu #action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.dropdown_menu #action_btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 992px){
+  .navibar .links {
+    display: none;
+  }
+
+  .navibar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media(max-width: 576px){
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
