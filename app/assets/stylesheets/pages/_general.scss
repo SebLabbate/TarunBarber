@@ -1,6 +1,13 @@
 body {
-  height: 100vh;
-  // background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+main {
+  flex-grow: 1;
 }
 
 li {
@@ -20,8 +27,7 @@ a:hover {
 /* HEADER */
 
 header {
-  position: relative;
-  padding: 0 2rem;
+  position: sticky;
 }
 
 * {

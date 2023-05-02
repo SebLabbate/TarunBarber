@@ -1,4 +1,6 @@
 .navibar {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 60px;
   margin: 0 auto;
@@ -6,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: black;
+  z-index: 999;
 }
 
 .navibar .logo a {
@@ -96,6 +99,10 @@
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 992px){
+  .navibar {
+    position: static;
+  }
+
   .navibar .links {
     display: none;
   }
@@ -106,6 +113,10 @@
 
   .dropdown_menu {
     display: block;
+  }
+
+  body {
+    padding-top: 0 !important;
   }
 }
 
