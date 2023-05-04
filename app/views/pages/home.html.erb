@@ -10,7 +10,8 @@
     </div>
   </div>
 </div>
-<div class="homepage-section-one">
+
+<div>
   <div class="section-links">
     <h3>SERVICES</h3>
     <h3>FIND US</h3>
@@ -18,67 +19,130 @@
   </div>
 
   <!-- services -->
-<div class="container">
-  <div class="grid-container">
-    <div class="grid-item">
-      <img src="/assets/example_img" alt="" class="services-img">
-    </div>
-    <div class="grid-item">
-      <div class="service-list">
-        <h4>Services</h4>
-        <div class="service-item">
-          <p>Men's Haircut</p>
-          <p>£15</p>
-        </div>
-        <div class="service-item">
-          <p>Men's Skin fade</p>
-          <p>£17</p>
-        </div>
-        <div class="service-item">
-          <p>Men's Hair & Beard</p>
-          <p>£20</p>
-        </div>
-        <div class="service-item">
-          <p>Kid's Haircut (under 12)</p>
-          <p>£12</p>
-        </div>
-        <div class="service-item">
-          <p>Senior Haircut (over 65)</p>
-          <p>£13</p>
-        </div>
-        <div class="service-item">
-          <p>Special Cut & Beard Oils (1hr)</p>
-          <p>£35</p>
+  <div class="container">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="/assets/example_img" alt="" class="services-img">
+      </div>
+      <div class="grid-item">
+        <div class="service-list">
+          <h4>Services</h4>
+          <div class="service-item">
+            <p>Men's Haircut</p>
+            <p>£15</p>
+          </div>
+          <div class="service-item">
+            <p>Men's Skin fade</p>
+            <p>£17</p>
+          </div>
+          <div class="service-item">
+            <p>Men's Hair & Beard</p>
+            <p>£20</p>
+          </div>
+          <div class="service-item">
+            <p>Kid's Haircut (under 12)</p>
+            <p>£12</p>
+          </div>
+          <div class="service-item">
+            <p>Senior Haircut (over 65)</p>
+            <p>£13</p>
+          </div>
+          <div class="service-item">
+            <p>Special Cut & Beard Oils (1hr)</p>
+            <p>£35</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="grid-item">
-      <div class="service-list">
-        <h4>Opening Hours</h4>
-        <div class="service-item">
-          <p>Monday</p>
-          <p>10:30am - 6pm</p>
-        </div>
-        <div class="service-item">
-          <p>Tuesday</p>
-          <p>Closed</p>
-        </div>
-        <div class="service-item">
-          <p>Wednesday - Friday</p>
-          <p>9am - 6pm</p>
-        </div>
-        <div class="service-item">
-          <p>Saturday</p>
-          <p>8:30am - 3pm</p>
-        </div>
-        <div class="service-item">
-          <p>Sunday</p>
-          <p>Closed</p>
+      <div class="grid-item">
+        <div class="service-list">
+          <h4>Opening Hours</h4>
+          <div class="service-item">
+            <p>Monday</p>
+            <p>10:30am - 6pm</p>
+          </div>
+          <div class="service-item">
+            <p>Tuesday</p>
+            <p>Closed</p>
+          </div>
+          <div class="service-item">
+            <p>Wednesday - Friday</p>
+            <p>9am - 6pm</p>
+          </div>
+          <div class="service-item">
+            <p>Saturday</p>
+            <p>8:30am - 3pm</p>
+          </div>
+          <div class="service-item">
+            <p>Sunday</p>
+            <p>Closed</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="grid-item">
-      <img src="/assets/example_img" alt="" class="services-img">
+      <div class="grid-item">
+        <img src="/assets/example_img" alt="" class="services-img">
+      </div>
     </div>
   </div>
 </div>
+
+<div class="findus-section">
+  <div class="section-links">
+    <h3>SERVICES</h3>
+    <h3>FIND US</h3>
+    <h3>GALLERY</h3>
+  </div>
+  <!-- find us -->
+
+  <div class="findus">
+    <div class="findus-info">
+      <h3>Tarun Barber</h3>
+      <h4>Address:</h4>
+      <p>48 Pyatt Street</p>
+      <p>Nottingham</p>
+      <p>NG2 2LF</p>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
+      <h4>Email:</h4>
+      <p>tarun@tarunbarber.com</p>
+    </div>
+
+    <div class="map-container">
+      <div style="width: 100%; height: 350px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+</div>
+
+<!-- gallery -->
+
+<div class="full-img" id="fullImgBox">
+  <img src="/assets/barberimg1" alt="" id="fullImg">
+  <span onClick="closeFullImg()">X</span>
+</div>
+
+<div class="img-gallery">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/example_img" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
+</div>
+
+<script>
+  const fullImgBox = document.getElementById("fullImgBox")
+  const fullImg = document.getElementById("fullImg")
+
+  function openFullImg(pic) {
+    fullImgBox.style.display = "flex"
+    fullImg.src = pic
+  }
+
+  function closeFullImg() {
+    fullImgBox.style.display = "none"
+  }
+
+</script>
