@@ -9,8 +9,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <script src="https://kit.fontawesome.com/1d5ac3df23.js" crossorigin="anonymous"></script>
-  </head>
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+
+  </head>
   <body>
     <header>
       <%= render "shared/navbar" %>
@@ -21,4 +24,5 @@
       <%= yield %>
     </main>
   </body>
+
 </html>

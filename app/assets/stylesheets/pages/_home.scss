@@ -7,6 +7,7 @@
 
 .hero h1, p {
   color: white;
+  z-index: 1;
 }
 
 .hero-links {
@@ -33,7 +34,7 @@
   }
 }
 
-.homepage-section-one {
+.homepage-section {
   height: calc(100vh - 60px);
 }
 
@@ -103,4 +104,46 @@
   display: flex;
   justify-content: space-between;
   gap: 150px;
+}
+
+.map-container {
+  width: 40%;
+}
+
+.mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-popup-close-button {
+  padding-right: 5px;
+}
+
+
+.findus-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  p {
+    color: black;
+  }
+}
+
+.findus {
+  display: flex;
+  justify-content: space-around;
 }
