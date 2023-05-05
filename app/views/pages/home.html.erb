@@ -116,33 +116,20 @@
 
 <!-- gallery -->
 
-<div class="full-img" id="fullImgBox">
-  <img src="/assets/barberimg1" alt="" id="fullImg">
-  <span onClick="closeFullImg()">X</span>
+<div data-controller="gallery">
+  <div class="full-img" data-gallery-target="fullImgBox">
+    <img src="/assets/barberimg1" alt="" data-gallery-target="fullImg">
+    <span data-action="click->gallery#closeFullImg">X</span>
+  </div>
+
+  <div class="img-gallery">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/example_img" alt="" data-action="click->gallery#open" data-src="/assets/example_img">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+  </div>
 </div>
-
-<div class="img-gallery">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/example_img" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-  <img src="/assets/barberimg1" alt="" onClick="openFullImg(this.src)">
-</div>
-
-<script>
-  const fullImgBox = document.getElementById("fullImgBox")
-  const fullImg = document.getElementById("fullImg")
-
-  function openFullImg(pic) {
-    fullImgBox.style.display = "flex"
-    fullImg.src = pic
-  }
-
-  function closeFullImg() {
-    fullImgBox.style.display = "none"
-  }
-
-</script>
