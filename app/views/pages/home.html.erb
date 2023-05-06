@@ -12,16 +12,17 @@
   </div>
 </div>
 
-<div data-controller="showhide">
+<div class="homepage-section" data-controller="showhide">
   <!-- links -->
   <div class="section-links">
     <button data-showhide-target="servicesBtn"
       data-action="click->showhide#displayServices"
+      class="selected-link"
       >SERVICES
     </button>
     <button data-showhide-target="hoursBtn"
       data-action="click->showhide#displayHours"
-      >Opening Hours
+      >OPENING HOURS
     </button>
     <button data-showhide-target="findBtn"
       data-action="click->showhide#displayFind"
@@ -29,12 +30,12 @@
     </button>
     <button data-showhide-target="galleryBtn"
       data-action="click->showhide#displayGallery"
-      >Gallery
+      >GALLERY
     </button>
   </div>
 
   <!-- services -->
-  <div class="container services-section" data-showhide-target="servicesSection">
+  <div class="section" data-showhide-target="servicesSection">
     <div class="grid-container">
       <div class="grid-item">
         <img src="/assets/example_img" alt="" class="services-img">
@@ -72,7 +73,7 @@
   </div>
 
   <!-- opening hours -->
-  <div class="container hours-section d-none" data-showhide-target="hoursSection">
+  <div class="section d-none" data-showhide-target="hoursSection">
     <div class="grid-container">
       <div class="grid-item">
         <div class="service-list">
@@ -106,25 +107,25 @@
   </div>
 
   <!-- find us -->
-  <div class="findus-section d-none" data-showhide-target="findusSection">
-    <div class="findus">
-      <div class="findus-info">
-        <h3>Tarun Barber</h3>
-        <h4>Address:</h4>
-        <p>48 Pyatt Street</p>
-        <p>Nottingham</p>
-        <p>NG2 2LF</p>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
-        <h4>Email:</h4>
-        <p>tarun@tarunbarber.com</p>
-      </div>
-
+  <div class="section d-none" data-showhide-target="findusSection">
       <div class="map-container">
-        <div style="width: 100%; height: 350px;"
+        <div
+          id="map"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
+      
+    <div class="service-list">
+      <h3>Tarun Barber</h3>
+      <h4>Address:</h4>
+      <p>48 Pyatt Street</p>
+      <p>Nottingham</p>
+      <p>NG2 2LF</p>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
+      <h4>Email:</h4>
+      <p>tarun@tarunbarber.com</p>
     </div>
   </div>
 

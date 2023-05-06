@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+// hero
 .hero {
   height: calc(100vh - 60px);
   background-size: cover;
@@ -34,18 +34,13 @@
   }
 }
 
+// homepage sections
 .homepage-section {
   height: calc(100vh - 60px);
 }
 
-.section-links {
-  padding-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
 
+// services / opening hours grid
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,13 +63,13 @@
 .grid-item img {
   max-width: 100%; /* to make the image responsive */
   height: auto;
+  max-height: 400px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
 }
 
 
-// responsive grid //
-
+// responsive grid
 @media (max-width: 991px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -88,6 +83,7 @@
   }
 }
 
+// service list
 .service-list {
   display: flex;
   flex-direction: column;
@@ -95,6 +91,8 @@
   border-radius: 5px;
   padding: 50px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  max-height: 400px;
+  min-width: 400px;
   p {
     color: black;
   }
@@ -106,29 +104,8 @@
   gap: 150px;
 }
 
-.map-container {
-  width: 40%;
-}
-
-.mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right {
-  display: none !important;
-}
-
-.mapboxgl-popup {
-  max-width: 200px;
-}
-
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-.mapboxgl-popup-close-button {
-  padding-right: 5px;
-}
-
-
-.findus-info {
+// findus section
+.findus {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,7 +120,10 @@
   }
 }
 
-.findus {
+.section {
+  height: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
