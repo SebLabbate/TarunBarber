@@ -1,3 +1,4 @@
+<!-- hero banner -->
 <div class="hero">
   <div class="hero-container">
     <div class="hero-content">
@@ -11,15 +12,29 @@
   </div>
 </div>
 
-<div>
+<div data-controller="showhide">
+  <!-- links -->
   <div class="section-links">
-    <h3>SERVICES</h3>
-    <h3>FIND US</h3>
-    <h3>GALLERY</h3>
+    <button data-showhide-target="servicesBtn"
+      data-action="click->showhide#displayServices"
+      >SERVICES
+    </button>
+    <button data-showhide-target="hoursBtn"
+      data-action="click->showhide#displayHours"
+      >Opening Hours
+    </button>
+    <button data-showhide-target="findBtn"
+      data-action="click->showhide#displayFind"
+      >FIND US
+    </button>
+    <button data-showhide-target="galleryBtn"
+      data-action="click->showhide#displayGallery"
+      >Gallery
+    </button>
   </div>
 
   <!-- services -->
-  <div class="container">
+  <div class="container services-section" data-showhide-target="servicesSection">
     <div class="grid-container">
       <div class="grid-item">
         <img src="/assets/example_img" alt="" class="services-img">
@@ -53,6 +68,12 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- opening hours -->
+  <div class="container hours-section d-none" data-showhide-target="hoursSection">
+    <div class="grid-container">
       <div class="grid-item">
         <div class="service-list">
           <h4>Opening Hours</h4>
@@ -83,53 +104,46 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="findus-section">
-  <div class="section-links">
-    <h3>SERVICES</h3>
-    <h3>FIND US</h3>
-    <h3>GALLERY</h3>
-  </div>
   <!-- find us -->
+  <div class="findus-section d-none" data-showhide-target="findusSection">
+    <div class="findus">
+      <div class="findus-info">
+        <h3>Tarun Barber</h3>
+        <h4>Address:</h4>
+        <p>48 Pyatt Street</p>
+        <p>Nottingham</p>
+        <p>NG2 2LF</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
+        <h4>Email:</h4>
+        <p>tarun@tarunbarber.com</p>
+      </div>
 
-  <div class="findus">
-    <div class="findus-info">
-      <h3>Tarun Barber</h3>
-      <h4>Address:</h4>
-      <p>48 Pyatt Street</p>
-      <p>Nottingham</p>
-      <p>NG2 2LF</p>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
-      <h4>Email:</h4>
-      <p>tarun@tarunbarber.com</p>
-    </div>
-
-    <div class="map-container">
-      <div style="width: 100%; height: 350px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      <div class="map-container">
+        <div style="width: 100%; height: 350px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- gallery -->
+  <!-- gallery -->
+  <div class="gallery-section d-none" data-controller="gallery" data-showhide-target="gallerySection">
+    <div class="full-img" data-gallery-target="fullImgBox">
+      <img src="/assets/barberimg1" alt="" data-gallery-target="fullImg">
+      <span data-action="click->gallery#closeFullImg">X</span>
+    </div>
 
-<div data-controller="gallery">
-  <div class="full-img" data-gallery-target="fullImgBox">
-    <img src="/assets/barberimg1" alt="" data-gallery-target="fullImg">
-    <span data-action="click->gallery#closeFullImg">X</span>
-  </div>
-
-  <div class="img-gallery">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/example_img" alt="" data-action="click->gallery#open" data-src="/assets/example_img">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
-    <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    <div class="img-gallery">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/example_img" alt="" data-action="click->gallery#open" data-src="/assets/example_img">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    </div>
   </div>
 </div>
