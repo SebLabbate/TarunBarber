@@ -6,7 +6,7 @@
       <p>Your Local Barber</p>
       <div class="hero-links">
         <a href="book">Book</a>
-        <a href="services">Services</a>
+        <a href="#scroll-point">Services</a>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
   </div>
 
   <!-- services -->
-  <div class="section" data-showhide-target="servicesSection">
+  <div class="section mt-4" data-showhide-target="servicesSection" id="scroll-point">
     <div class="grid-container">
       <div class="grid-item">
         <img src="/assets/example_img" alt="" class="services-img">
@@ -73,7 +73,7 @@
   </div>
 
   <!-- opening hours -->
-  <div class="section d-none" data-showhide-target="hoursSection">
+  <div class="section d-none mt-4" data-showhide-target="hoursSection" id="scroll-point">
     <div class="grid-container">
       <div class="grid-item">
         <div class="service-list">
@@ -107,30 +107,36 @@
   </div>
 
   <!-- find us -->
-  <div class="section d-none" data-showhide-target="findusSection">
-      <div class="map-container">
-        <div
-          id="map"
-          data-controller="map"
-          data-map-markers-value="<%= @markers.to_json %>"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="section d-none mt-4" data-showhide-target="findusSection" id="scroll-point">
+    <div class="find-grid-container">
+      <div class="find-grid-item">
+        <div class="map-container">
+          <div
+            id="map"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       </div>
-      
-    <div class="service-list">
-      <h3>Tarun Barber</h3>
-      <h4>Address:</h4>
-      <p>48 Pyatt Street</p>
-      <p>Nottingham</p>
-      <p>NG2 2LF</p>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
-      <h4>Email:</h4>
-      <p>tarun@tarunbarber.com</p>
+
+      <div class="find-grid-item">
+        <div class="service-list" id="address">
+          <h3>Tarun Barber</h3>
+          <h4>Address:</h4>
+          <p>48 Pyatt Street</p>
+          <p>Nottingham</p>
+          <p>NG2 2LF</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank">Directions</a>
+          <h4>Email:</h4>
+          <p>tarun@tarunbarber.com</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- gallery -->
-  <div class="gallery-section d-none" data-controller="gallery" data-showhide-target="gallerySection">
+  <div class="gallery-section d-none" data-controller="gallery" data-showhide-target="gallerySection" id="scroll-point">
     <div class="full-img" data-gallery-target="fullImgBox">
       <img src="/assets/barberimg1" alt="" data-gallery-target="fullImg">
       <span data-action="click->gallery#closeFullImg">X</span>

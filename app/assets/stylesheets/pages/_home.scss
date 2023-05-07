@@ -36,7 +36,7 @@
 
 // homepage sections
 .homepage-section {
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
 }
 
 
@@ -46,9 +46,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   justify-content: center;
-
   h4 {
     padding-bottom: 15px;
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
@@ -58,6 +61,7 @@
   align-items: center;
   padding: 1rem;
   text-align: center;
+  vertical-align: middle;
 }
 
 .grid-item img {
@@ -68,19 +72,34 @@
   border-radius: 5px;
 }
 
+.find-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns with equal width */
+  gap: 4rem;
+}
 
-// responsive grid
-@media (max-width: 991px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+.find-grid-item {
+  padding: 1rem;
+}
+
+@media (max-width: 1010px) {
+  .find-grid-container {
+    display: block; /* change display to block to stack items */
   }
-  .grid-item:nth-child(4) {
-    order: 3;
+
+  .map-container {
+    width: 100%; /* make the map container take up full width */
+    padding-bottom: 0; /* remove padding bottom to maintain aspect ratio */
+    height: auto; /* set height to auto to allow content to flow */
   }
-  .grid-item:nth-child(3) {
-    order: 4;
+
+  #map {
+    margin-bottom: 20px;
   }
+}
+
+#address {
+  width: 400px !important;
 }
 
 // service list
@@ -102,22 +121,6 @@
   display: flex;
   justify-content: space-between;
   gap: 150px;
-}
-
-// findus section
-.findus {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 50px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  p {
-    color: black;
-  }
 }
 
 .section {
