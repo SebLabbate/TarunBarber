@@ -1,13 +1,14 @@
 // hero
 .hero {
   height: calc(100vh - 60px);
-  background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("example_hero") left top / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1, p {
   color: white;
-  z-index: 1;
 }
 
 .hero-links {
@@ -15,17 +16,11 @@
   gap: 1.5rem;
 }
 
-.hero-container {
-  position: relative;
-  top: 200px;
-}
-
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 900;
 }
 
 @media(max-width: 576px){
@@ -39,6 +34,11 @@
   min-height: calc(100vh - 60px);
 }
 
+// box shadow //
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px !important;
+}
 
 // services / opening hours grid
 .grid-container {
@@ -68,9 +68,10 @@
   max-width: 100%; /* to make the image responsive */
   height: auto;
   max-height: 400px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
+  border: 1px solid black;
 }
+
 
 .find-grid-container {
   display: grid;

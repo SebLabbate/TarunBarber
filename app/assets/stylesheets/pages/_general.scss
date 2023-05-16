@@ -28,6 +28,7 @@ a:hover {
 
 header {
   position: sticky;
+  z-index: 999;
 }
 
 * {
@@ -36,3 +37,8 @@ header {
   box-sizing: border-box;
 }
 
+// fonts //
+
+h1, h2, h3, h4, h5, p, a, button {
+  font-family: 'Source Code Pro', monospace;
+}
