@@ -1,0 +1,29 @@
+<div class="contact-section">
+  <div class="section mt-4">
+    <div class="find-grid-container">
+      <div class="find-grid-item">
+        <div class="service-list" id="address">
+          <h3>Tarun Barber</h3>
+          <h4>Address:</h4>
+          <p>48 Pyatt Street</p>
+          <p>Nottingham</p>
+          <p>NG2 2LF</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=48%20Pyatt%20St%2C%20Nottingham%20NG2%202LF" target="_blank" class="link mb-2">Directions</a>
+          <h4>Email:</h4>
+          <p>tarun@tarunbarber.com</p>
+        </div>
+      </div>
+
+      <div class="find-grid-item">
+        <div class="map-container">
+          <div
+            id="map"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
