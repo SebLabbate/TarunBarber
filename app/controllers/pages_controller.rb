@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :tarun ]
 
   def home
     @markers =
@@ -8,5 +8,9 @@ class PagesController < ApplicationController
         lng: -1.1404715734755337,
         info_window_html: render_to_string(partial: "info_window")
       }]
+  end
+
+  def tarun
+
   end
 end
