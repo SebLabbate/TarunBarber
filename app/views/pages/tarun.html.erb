@@ -1,0 +1,36 @@
+<div class="hero">
+  <div class="hero-content">
+    <h1>Tarun Barber</h1>
+    <p>Your Local Barber</p>
+    <div class="hero-links">
+      <a href="book">Book</a>
+      <a href="#scroll-point">About</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mt-5 mb-2">About</h2>
+  <p id="description">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quas accusamus dicta ullam, enim minima asperiores ipsum architecto,
+    et cumque molestias quae. Magnam, eligendi ullam? Esse nulla sit debitis animi vero? Vitae adipisci natus ad delectus atque fugiat labore,
+    consequuntur dolorem repellendus, eaque molestias necessitatibus consequatur sapiente aspernatur sint alias aliquid nisi, temporibus illo
+    velit eveniet sed. Cumque, sint. Minima incidunt debitis laboriosam blanditiis optio, omnis neque ipsam nesciunt, modi exercitationem
+    inventore rem impedit ut eaque quae necessitatibus quidem itaque, suscipit earum sunt provident a voluptas. Recusandae sit consequatur nihil
+    quo minima accusantium quam? Id numquam magni ut eum eius.
+  </p>
+
+    <!-- gallery -->
+  <div class="gallery-section" data-controller="gallery" data-showhide-target="gallerySection" id="scroll-point">
+    <div class="full-img" data-gallery-target="fullImgBox">
+      <img src="/assets/barberimg1" alt="" data-gallery-target="fullImg">
+      <span data-action="click->gallery#closeFullImg">X</span>
+    </div>
+
+    <div class="img-gallery">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+      <img src="/assets/example_img" alt="" data-action="click->gallery#open" data-src="/assets/example_img">
+      <img src="/assets/barberimg1" alt="" data-action="click->gallery#open" data-src="/assets/barberimg1">
+    </div>
+  </div>
+</div>

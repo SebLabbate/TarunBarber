@@ -1,9 +1,13 @@
 <div class="navibar">
   <div class="logo">
-    <a href="/root">Tarun Barber</a>
+    <a href="<%= root_path %>">Tarun Barber</a>
   </div>
   <ul class="links">
-    <li><a href="tarun">Tarun</a></li>
+    <% if current_page?(root_path) %>
+      <li><a href="tarun">Tarun</a></li>
+    <% elsif current_page?(tarun_path) %>
+      <li><a href="<%= root_path %>">Home</a></li>
+    <% end %>
     <li><a href="contact">Contact</a></li>
     <li><button id="action_btn">Book</button></li>
   </ul>
