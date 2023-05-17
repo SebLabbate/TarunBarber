@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/tarun", to: "pages#tarun"
+  get "/contact", to: "pages#contact"
 end
